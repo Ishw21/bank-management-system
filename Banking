@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main()
+{
+  int balance=0,deposite,withdraw;
+  float ci;
+  char op;
+  while(1)
+  {
+    printf("\nBanking system");
+    printf("\n...............");
+    printf("\nD->Deposit");
+    printf("\nW-Withdraw");
+    printf("\nB->Balance");
+    printf("\nI->Interest");
+    printf("\nQ->Quit");
+    printf("\nEnter operatin:");
+    scanf("%c",&op);
+  }
+  switch(op)
+  {
+    case'D':
+      printf("\nenter Deposit amount:");
+      scanf("%d",&deposit);
+      balance+=deposit;
+      break;
+    case'W':
+      printf("\nenter Withdraw amount:");
+      scanf("%d",&withdraw);
+      balance-=withdraw;
+      break;
+    case'B':
+      printf("Balance=%d",balance);
+      break;
+    case'I':
+      ci=(float)balance*4/100;
+      balance+=ci;
+      printf("\nInterest:%f",ci);
+      break;
+    case'Q':
+       break;
+    default:
+      printf("invalud operation!");
+  }
+return 0;
+}
